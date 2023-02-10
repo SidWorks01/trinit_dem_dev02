@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "DEM CO2 Footprint",
-    "description": "An Extension that detects the carbon Footprint you leave",
+    "description": "An Extension that detects the Carbon Footprint of Websites",
     "version": "1.0",
     "action": {
       "default_popup": "index.html",

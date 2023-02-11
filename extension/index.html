@@ -23,7 +23,7 @@
 </head>
 
 <body background="/images/background.jpg">
-    <script src="background.js"></script>
+    <script src="background.js">document.getElementById("Session").innerHTML = 5; console.log("fetched");</script>
     <!-- Footrpint Detector -->
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
         <h2 class="w3-wide">Carbon Footprint Detector</h2>
@@ -32,12 +32,13 @@
         <p class="w3-justify w3-center" style="background-color: rgb(196, 196, 196);"> All Time Carbon Footprint = Some
             Number
         </p>
-        <p class="w3-justify w3-center" style="background-color: rgb(196, 196, 196);"> This Session's Footprint = Some
+        <p id="Session" class="w3-justify w3-center" style="background-color: rgb(196, 196, 196);"> This
+            Session's Footprint = Some
             Number
         </p>
         <a class="btn btn-primary" href="stats.html" target="_blank" rel="noopener noreferrer" role="button">View
             Stats</a>
-            <a class="btn btn-secondary" href="#" role="button">View Leaderboard</a>
+        <a class="btn btn-secondary" href=".\rank.html" target="_blank" rel="noopener noreferrer" role="button">View Leaderboard</a>
 
     </div>
 

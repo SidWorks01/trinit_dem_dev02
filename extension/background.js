@@ -53,7 +53,13 @@ function roundTo(n, digits) {
 	}
 	return n;
   }
-
+function Func() {
+	fetch("./database/data.json")
+	  .then((res) => {
+		return res.json();
+	  })
+	  .then((data) => console.log(data));
+  }
 
 function carbonfootprint(){
 	var downloaded = downloadedData();
@@ -63,12 +69,33 @@ function carbonfootprint(){
 	var roundoff = roundTo(total, 8)
 	document.getElementById("Session_footprint").innerText = "Session's Footprint = " + String(roundoff) + "gm";
 	console.log("fetched");
-	
+	Func();
+		
 }
+
+function overallfootprint(){
+	document.getElementById("Overall_footprint").innerText = "All Time Footprint = Some Number in gm";
+
+
+}
+overallfootprint();
+carbonfootprint();
+chrome.tabs.onUpdated.addListener((tabId, tab) => {
+	if (tab.url && tab.url.includes("//")) {
+	  const queryParameters = tab.url.split("?")[1];
+	  const urlParameters = new URLSearchParams(queryParameters);
+		console.log("works");
+	  chrome.tabs.sendMessage(tabId, {
+		type: "NEW",
+		videoId: urlParameters.get("v"),
+	  });
+	}
+  });
+
 
 setInterval(function(){
     carbonfootprint()
-  }, 600);
+  }, 5000);
 
 
 updateDatabase();

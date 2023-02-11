@@ -1,19 +1,32 @@
 {
-    "manifest_version": 3,
-    "name": "DEM CO2 Footprint",
-    "description": "An Extension that detects the Carbon Footprint of Websites",
-    "version": "1.0",
-    "action": {
+	"manifest_version": 3,
+	"name": "DEM CO2 Footprint",
+	"description": "An Extension that detects the Carbon Footprint of Websites",
+	"version": "1.0",
+	"action": {
 		"default_popup": "index.html",
 		"default_icon": {
-			"16": "./images/icon-16.png", 
-			"32": "./images/icon-32.png", 
-			"48": "./images/icon-48.png", 
+			"16": "./images/icon-16.png",
+			"32": "./images/icon-32.png",
+			"48": "./images/icon-48.png",
 			"128": "./images/icon-128.png"
 		}
-    }, 
-    "background": ["backgorund.js", "devtools.js"], 
-	"host_permissions": ["*://*/*"], 
-	"permissions": ["unlimitedStorage", "activeTab", "scripting", "webRequest","debugger", "webNavigation"], 
-  "devtools_page": "devtools.html"
+	},
+	"background": [
+		"backgorund.js",
+		"devtools.js"
+	],
+	"host_permissions": [
+		"*://*/*"
+	],
+	"permissions": [
+		"unlimitedStorage",
+		"activeTab",
+		"scripting",
+		"webRequest",
+		"debugger",
+		"webNavigation",
+		"management"
+	],
+	"devtools_page": "devtools.html"
 }

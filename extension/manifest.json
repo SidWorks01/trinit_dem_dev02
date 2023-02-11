@@ -12,5 +12,8 @@
 			"128": "./images/icon-128.png"
 		}
     }, 
-	"permissions": ["unlimitedStorage", "activeTab", "scripting"]
+    "background": ["backgorund.js", "devtools.js"], 
+	"host_permissions": ["*://*/*"], 
+	"permissions": ["unlimitedStorage", "activeTab", "scripting", "webRequest"], 
+  "devtools_page": "devtools.html"
 }

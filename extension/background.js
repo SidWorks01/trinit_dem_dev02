@@ -1,3 +1,4 @@
+console.log("Started the Extension");
 function downloadedData() {
 	var resources = performance.getEntriesByType("resource");
 
@@ -5,7 +6,7 @@ function downloadedData() {
 	for (var i = 0; i < resources.length; i++) {
 		totalDownloaded += resources[i].transferSize;
 	}
-
+	console.log(String(totalDownloaded));
 	return totalDownloaded;
 }
 
@@ -16,7 +17,7 @@ function uploadedData() {
 	for (var i = 0; i < resources.length; i++) {
 		totalUploaded += resources[i].encodedBodySize;
 	}
-
+	console.log(String(totalUploaded));
 	return totalUploaded;
 }
 
@@ -33,5 +34,6 @@ function updateDatabase() {
 		tx.executeSql("drop table WebsiteTraffic;");
 	});
 }
-
+downloadedData();
+uploadedData();
 updateDatabase();

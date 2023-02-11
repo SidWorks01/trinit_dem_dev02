@@ -1,0 +1,19 @@
+{
+    "sessions": [
+        {
+            "id": null,
+            "total_footprint": null,
+            "start": null,
+            "end": null,
+            "upload": null,
+            "download": null,
+            "elapsed_time": null,
+            "wesbites": [
+                {
+                    "url": null,
+                    "total_footprint": null
+                }
+            ]
+        }
+    ]
+}

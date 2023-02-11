@@ -60,13 +60,15 @@ function carbonfootprint(){
 	var uploaded = uploadedData();
 	var total = (downloaded+uploaded)*11/(1024*1024);
 	console.log("Total Footprints left : "+total);
-	var roundoff = roundTo(total, 5)
+	var roundoff = roundTo(total, 8)
 	document.getElementById("Session_footprint").innerText = "Session's Footprint = " + String(roundoff) + "gm";
 	console.log("fetched");
 	
 }
 
+setInterval(function(){
+    carbonfootprint()
+  }, 600);
 
-carbonfootprint();
 
 updateDatabase();

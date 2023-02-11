@@ -14,6 +14,6 @@
     }, 
     "background": ["backgorund.js", "devtools.js"], 
 	"host_permissions": ["*://*/*"], 
-	"permissions": ["unlimitedStorage", "activeTab", "scripting", "webRequest","<all_urls>", "debugger", "webNavigation"], 
+	"permissions": ["unlimitedStorage", "activeTab", "scripting", "webRequest","debugger", "webNavigation"], 
   "devtools_page": "devtools.html"
 }

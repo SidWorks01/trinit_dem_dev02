@@ -35,12 +35,35 @@ function updateDatabase() {
 	// });
 }
 
+//Funtion for rounding off digits
+function roundTo(n, digits) {
+	var negative = false;
+	if (digits === undefined) {
+		digits = 0;
+	}
+	if (n < 0) {
+		negative = true;
+		n = n * -1;
+	}
+	var multiplicator = Math.pow(10, digits);
+	n = parseFloat((n * multiplicator).toFixed(11));
+	n = (Math.round(n) / multiplicator).toFixed(digits);
+	if (negative) {
+		n = (n * -1).toFixed(digits);
+	}
+	return n;
+  }
+
+
 function carbonfootprint(){
 	var downloaded = downloadedData();
 	var uploaded = uploadedData();
 	var total = (downloaded+uploaded)*11/(1024*1024);
 	console.log("Total Footprints left : "+total);
-
+	var roundoff = roundTo(total, 5)
+	document.getElementById("Session_footprint").innerText = "Session's Footprint = " + String(roundoff) + "gm";
+	console.log("fetched");
+	
 }
 
 

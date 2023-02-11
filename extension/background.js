@@ -22,17 +22,17 @@ function uploadedData() {
 }
 
 function updateDatabase() {
-	const db = openDatabase("myDatabase", "1.0", "My Database", 2 * 1024 * 1024);
+	// const db = openDatabase("myDatabase", "1.0", "My Database", 2 * 1024 * 1024);
 
-	db.transaction(function (tx) {
-		tx.executeSql('CREATE TABLE IF NOT EXISTS WebsiteTraffic (id INTEGER PRIMARY KEY, website TEXT, start TIME, end TIME)');
-	});
+	// db.transaction(function (tx) {
+	// 	tx.executeSql('CREATE TABLE IF NOT EXISTS WebsiteTraffic (id INTEGER PRIMARY KEY, website TEXT, start TIME, end TIME)');
+	// });
 
-	db.transaction(function(tx) {
-		console.log("check");
-		tx.executeSql("INSERT INTO WebsiteTraffic (url, traffic) VALUES (?, ?)", ["www.example.com", 500]);
-		tx.executeSql("drop table WebsiteTraffic;");
-	});
+	// db.transaction(function(tx) {
+	// 	console.log("check");
+	// 	tx.executeSql("INSERT INTO WebsiteTraffic (url, traffic) VALUES (?, ?)", ["www.example.com", 500]);
+	// 	tx.executeSql("drop table WebsiteTraffic;");
+	// });
 }
 downloadedData();
 uploadedData();

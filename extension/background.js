@@ -34,6 +34,16 @@ function updateDatabase() {
 	// 	tx.executeSql("drop table WebsiteTraffic;");
 	// });
 }
-downloadedData();
-uploadedData();
+
+function carbonfootprint(){
+	var downloaded = downloadedData();
+	var uploaded = uploadedData();
+	var total = (downloaded+uploaded)*11/(1024*1024);
+	console.log("Total Footprints left : "+total);
+
+}
+
+
+carbonfootprint();
+
 updateDatabase();

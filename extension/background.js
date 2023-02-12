@@ -95,4 +95,5 @@ chrome.tabs.onUpdated.addListener((tabId, tab) => {
 
 setInterval(function () {
   carbonfootprint();
-}, 5000);
+  overall();
+}, 1000);

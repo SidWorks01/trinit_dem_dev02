@@ -17,6 +17,7 @@ Then Unload files from the cloned repository
 ### 🕹️ Working
 
 - To find out the total number of emissions done by data uploaded and data downloaded we first recieved the number  of packets through a function **performance()** , for stored data like that of drive , we made another function to handle them . 
+- We used devtools from the Chrome Extension to pass down the request size per website.
 - These resources are then passed through a formula to Find out number of emissions and then these are stored in a database through a **classification** method stored in arrays.
 
 - Finally , we Bring out the light to our Extension page through Making a UI for showing Total Emissions and Emissions per session on the main screen 

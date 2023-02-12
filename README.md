@@ -1,30 +1,24 @@
-# trinit
+# TriNIT-Dev02
 
-## Problem Statement 
+###
 
-# DEV02
-## Topic: Peeking The Emissions
+### 🚀 Getting Started 
+```
+git clone https://github.com/santacodes/trinit_dem_dev02.git
+```
+Check if all files are in
 
-Based on statistics, the download of one GB of data from the internet emits 11 grams of
-CO2-equivalents. An unoptimized website generally loads MBs of data on request.
-Considering that the website gets visited thousands and sometimes millions of times
-every day, major websites might have an unforeseen carbon footprint per user.
+### ⚙️ Configuration
 
-## Objectives:
-● Make a browser extension and calculate carbon footprint based on the total
-data sent/received when a user visits any website.
-● Generate and display to the user the expected carbon footprint he has caused
-by visiting various websites.
-● Create a website and display web pages based on their rank based on the
-overall footprint.
-● Provide detailed carbon emissions caused by users on different sessions.
-● To categorize websites as Green, Semi-Green, and Non-Green using parameters
-from emission data.
+Go to the Extensions Tab in your Chrome Extensions and Enable Developer Mode 
+
+Then Unload files from the cloned repository
+
+### 🕹️ Working
+
+To find out the total number of emissions done by data uploaded and data downloaded we first recieved the number of packets through a function performance() , for stored data like that of drive , we made another function to handle them . These resources are then passed through a formula to Find out number of emissions and then these are stored in a database through a classification method stored in arrays.
+
+Finally , we Bring out the light to our Extension page through Making a UI for showing Total Emissions and Emissions per session on the main screen along with Leaderboard Screen for all Ranking Webistes based off emissions and Statistics Page depicting numbe rof emissions on a session-to-session basis. 
 
 
-## Brownie Points:
-● Store all-time data showing the total emission caused by the user.
-● Recommend users visit sites with a lesser footprint and provide similar
-functionality.
-● Recommend users to upgrade their network depending upon the percentage of
-packets lost during transmission.
+###

@@ -1,7 +1,7 @@
 var myArray = [
     { 'rank': '1', 'website': 'google.com', 'carbon': '1.211989' },
-    { 'rank': '2', 'website': 'gmail.com', 'carbon': '1.11989' },
-    { 'rank': '3', 'website': 'yahoo.com', 'carbon': '0.441990' },
+    { 'rank': '2', 'website': 'github.com', 'carbon': '1.11989' },
+    { 'rank': '3', 'website': 'gmail.com', 'carbon': '0.441990' },
     { 'rank': '4', 'website': 'youtube.com', 'carbon': '0.391993' },
     { 'rank': '5', 'website': 'instagram.com', 'carbon': '0.3121991' },
     { 'rank': '6', 'website': 'outlook.com', 'carbon': '0.0311995' },

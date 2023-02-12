@@ -49,6 +49,7 @@ function carbonfootprint() {
   console.log("Total Footprints left : " + total);
   var roundoff = roundTo(total, 8);
   session = roundoff;
+  window.localStorage.setItem("sessionfootprint", Number(roundoff));
   document.getElementById("Session_footprint").innerText =
     "Session's Footprint = " + String(roundoff) + "gm";
   console.log("Updated Session");
